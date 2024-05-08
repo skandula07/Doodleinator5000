@@ -13,8 +13,8 @@ checkstyle {
 }
 
 application {
-    mainModule = 'starterCode'
-    mainClass = 'starterCode.Driver'
+    mainModule = 'project'
+    mainClass = 'project.Driver'
 }
 
 test {

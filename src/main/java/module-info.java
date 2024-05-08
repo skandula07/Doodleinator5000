@@ -13,8 +13,12 @@ module personalLibrary {
     requires java.desktop;
     requires org.jetbrains.annotations;
 
-    opens starterCode to javafx.fxml;
-    exports starterCode;
+    opens project to javafx.fxml;
+    exports project;
+    exports project.Controller;
+    exports project.View;
+    exports project.Model;
+    opens project.Controller to javafx.fxml;
 }
 
 
