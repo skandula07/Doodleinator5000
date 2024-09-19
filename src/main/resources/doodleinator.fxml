@@ -3,37 +3,144 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Scene?>
 <?import javafx.scene.canvas.Canvas?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="720.0" prefWidth="1280.0">
+    <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: LIGHT PINK">
       <children>
-         <VBox prefHeight="50.0" prefWidth="1280.0">
+         <VBox prefHeight="600.0" prefWidth="900.0">
             <children>
-               <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                  <children>
-                     <Button fx:id="brush" mnemonicParsing="false" text="Brush" />
-                     <ColorPicker fx:id="colorpicker">
-                        <value>
-                           <Color />
-                        </value>
-                     </ColorPicker>
-                     <TextField fx:id="brushsize" text="1" />
-                     <CheckBox fx:id="eraser" mnemonicParsing="false" text="Eraser" />
-                  </children>
+               <HBox prefHeight="600.0" prefWidth="344.0" spacing="10.0">
                   <padding>
                      <Insets left="20.0" right="20.0" top="20.0" />
                   </padding>
+                  <children>
+                     <VBox prefHeight="651.0" prefWidth="102.0">
+                        <children>
+                           <VBox fx:id="toolButtons" alignment="CENTER" prefHeight="171.0" prefWidth="104.0">
+                              <children>
+                                 <ToggleButton fx:id="brush" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="BRUSH!">
+                                    <VBox.margin>
+                                       <Insets bottom="2.0" />
+                                    </VBox.margin>
+                                 </ToggleButton>
+                                 <ToggleButton fx:id="elipse" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="ELLIPSE!">
+                                    <VBox.margin>
+                                       <Insets bottom="2.0" />
+                                    </VBox.margin>
+                                 </ToggleButton>
+                                 <ToggleButton fx:id="line" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="LINE!">
+                                    <VBox.margin>
+                                       <Insets bottom="2.0" />
+                                    </VBox.margin>
+                                 </ToggleButton>
+                                 <ToggleButton fx:id="box" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="BOX!">
+                                    <VBox.margin>
+                                       <Insets bottom="2.0" />
+                                    </VBox.margin>
+                                 </ToggleButton>
+                              </children>
+                           </VBox>
+                           <Pane prefHeight="45.0" prefWidth="102.0" />
+                           <ColorPicker fx:id="linecolor" prefHeight="25.0" prefWidth="100.0">
+                              <value>
+                                 <Color />
+                              </value>
+                              <opaqueInsets>
+                                 <Insets bottom="5.0" />
+                              </opaqueInsets>
+                              <VBox.margin>
+                                 <Insets bottom="2.0" />
+                              </VBox.margin>
+                           </ColorPicker>
+                           <TextField fx:id="strokeSize" text="3" />
+                           <CheckBox fx:id="eraser" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Eraser">
+                              <opaqueInsets>
+                                 <Insets bottom="5.0" />
+                              </opaqueInsets>
+                              <VBox.margin>
+                                 <Insets bottom="2.0" />
+                              </VBox.margin>
+                           </CheckBox>
+                           <ColorPicker fx:id="fillcolor" prefHeight="25.0" prefWidth="100.0" visible="false">
+                              <value>
+                                 <Color />
+                              </value>
+                              <opaqueInsets>
+                                 <Insets bottom="5.0" />
+                              </opaqueInsets>
+                              <VBox.margin>
+                                 <Insets bottom="2.0" />
+                              </VBox.margin>
+                           </ColorPicker>
+                           <Pane prefHeight="37.0" prefWidth="104.0">
+                              <opaqueInsets>
+                                 <Insets bottom="5.0" />
+                              </opaqueInsets>
+                              <VBox.margin>
+                                 <Insets bottom="2.0" />
+                              </VBox.margin>
+                           </Pane>
+                           <VBox>
+                              <children>
+                                 <ToggleButton fx:id="newButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="NEW">
+                                    <VBox.margin>
+                                       <Insets bottom="2.0" />
+                                    </VBox.margin>
+                                 </ToggleButton>
+                                 <ToggleButton fx:id="clearButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="CLEAR">
+                                    <VBox.margin>
+                                       <Insets bottom="2.0" />
+                                    </VBox.margin>
+                                 </ToggleButton>
+                                 <ToggleButton fx:id="saveButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="SAVE">
+                                    <VBox.margin>
+                                       <Insets bottom="2.0" />
+                                    </VBox.margin>
+                                 </ToggleButton>
+                                 <ToggleButton fx:id="openButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="OPEN">
+                                    <VBox.margin>
+                                       <Insets bottom="2.0" />
+                                    </VBox.margin>
+                                 </ToggleButton>
+                              </children>
+                           </VBox>
+                        </children>
+                        <opaqueInsets>
+                           <Insets bottom="4.0" />
+                        </opaqueInsets>
+                     </VBox>
+                     <StackPane fx:id="stackPane" prefHeight="550.0" prefWidth="750.0" style="-fx-border-color: black;">
+                        <children>
+                           <Canvas fx:id="canvas" height="550.0" width="750.0" />
+                        </children>
+                     </StackPane>
+                  </children>
                </HBox>
+               <Pane prefHeight="56.0" prefWidth="900.0" style="-fx-background-position: Center;">
+                  <children>
+                     <Label alignment="CENTER" layoutX="239.0" layoutY="4.0" prefHeight="19.0" prefWidth="539.0" text="MAKE A DRAWING!">
+                        <font>
+                           <Font name="Comic Sans MS Bold" size="13.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
             </children>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
          </VBox>
-         <Canvas fx:id="canvas" height="606.0" layoutX="39.0" layoutY="72.0" width="1200.0" />
       </children></AnchorPane>
 </Scene>

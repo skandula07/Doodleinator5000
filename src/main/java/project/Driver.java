@@ -15,5 +15,4 @@ public class Driver {
         Application.launch(PaintAppController.class, args);
     }
 
-
 }
