@@ -1,2 +1,4 @@
 # Doodleinator5000
-drawing app 🔥🔥🔥
+A simple Java based drawing app ✏️
+
+To run, clone the repo and simply build then execute.
